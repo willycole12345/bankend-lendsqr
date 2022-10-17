@@ -1,16 +1,16 @@
-import { IsNumber, IsString, IsNumberString } from 'class-validator';
+import { IsString, IsNumberString } from 'class-validator';
 
 export class CreateTransferDto {
   @IsString()
   public sendername: string;
 
-  @IsString()
+  @IsNumberString()
   public senderaccountnumber: number;
 
   @IsString()
   public receivername: string;
 
-  @IsNumber()
+  @IsNumberString()
   public receiveraccountnumber: number;
 
   @IsNumberString()
