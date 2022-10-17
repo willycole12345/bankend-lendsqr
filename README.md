@@ -17,14 +17,15 @@ Content-Type : application/x-www-form-urlencoded
 
 Payload Consist of
 {
-username:
-firstname:
-lastname:
-balance:
-email:
-occupation:
-nationality:
-address:
+firstname: string;
+lastname: string;
+accountnumber: number;
+balance: number;
+email:string;
+nationality:string;
+occupation: string;
+accounttype: string;
+address: string;
 }
 
 A user can fund their account
