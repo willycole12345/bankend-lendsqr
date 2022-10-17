@@ -2,6 +2,7 @@ Assessment
 Demo Credit is a mobile lending app that requires wallet functionality. This is needed as borrowers need a wallet to receive the loans they have been granted and also send the money for repayments.
 
 E-R Diagram link: https://app.dbdesigner.net/designer/schema/567822
+
 You are required to build an MPV wallet service where:
 
 A user can create an account
@@ -51,7 +52,7 @@ Payload Consist of
 
 A user can transfer funds to another user’s account
 
-EndPoints: [POST] https://localhost:3000/accounts/withDrawFunds
+EndPoints: [POST] https://localhost:3000/accounts/FundsTransfer
 
 Payload Consist of
 Header: {
