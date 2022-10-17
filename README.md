@@ -9,7 +9,7 @@ A user can create an account
 
 The api for creation consist of
 
-EndPoints: [POST] https://localhost:3000/accounts
+EndPoints: [POST] https://lendsql.herokuapp.com/accounts
 
 Payload Consist of
 Header: {
@@ -32,7 +32,7 @@ address: string;
 
 A user can fund their account
 
-EndPoints: [POST] https://localhost:3000/accounts/funduserAccount
+EndPoints: [POST] https://lendsql.herokuapp.com/accounts/funduserAccount
 
 Payload Consist of
 Header: {
@@ -43,7 +43,7 @@ Payload Consist of
 {
 
                   sendername:string;
-                  recievername:string;
+                  receivername:string;
                   accountnumber:number;
                   amount:number;
                   naration:string;
@@ -52,7 +52,7 @@ Payload Consist of
 
 A user can transfer funds to another user’s account
 
-EndPoints: [POST] https://localhost:3000/accounts/FundsTransfer
+EndPoints: [POST] https://lendsql.herokuapp.com/accounts/FundsTransfer
 
 Payload Consist of
 Header: {
@@ -63,7 +63,7 @@ Payload Consist of
 {
 
                   sendername:string;
-                  recievername:string;
+                  receivername:string;
                   accountnumber:number;
                   amount:number;
                   naration:string;
@@ -72,7 +72,7 @@ Payload Consist of
 
 A user can withdraw funds from their account.
 
-EndPoints: [POST] https://localhost:3000/accounts/withDrawFunds
+EndPoints: [POST] https://lendsql.herokuapp.com/accounts/withDrawFunds
 
 Payload Consist of
 Header: {
@@ -84,7 +84,7 @@ Payload Consist of
 
                   sendername:string;
                   recievername:string;
-                  recieveraccountnumber:number;
+                  receiveraccountnumber:number;
                   accountnumber:number;
                   amount:number;
                   naration:string;

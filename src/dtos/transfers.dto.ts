@@ -8,7 +8,7 @@ export class CreateTransferDto {
   public senderaccountnumber: string;
 
   @IsNumberString()
-  public receivername: number;
+  public receivername: string;
 
   @IsNumber()
   public receiveraccountnumber: number;

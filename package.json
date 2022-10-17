@@ -21,6 +21,7 @@
     "deploy:dev": "pm2 start ecosystem.config.js --only dev"
   },
   "dependencies": {
+    "after-all": "^2.0.2",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
@@ -52,9 +53,10 @@
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/hpp": "^0.2.2",
-    "@types/jest": "^28.1.6",
+    "@types/jest": "^28.1.8",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/knex": "^0.16.1",
+    "@types/mocha": "^10.0.0",
     "@types/morgan": "^1.9.3",
     "@types/node": "^17.0.45",
     "@types/supertest": "^2.0.12",
@@ -69,6 +71,7 @@
     "husky": "^8.0.1",
     "jest": "^28.1.1",
     "lint-staged": "^13.0.3",
+    "mocha": "^10.1.0",
     "node-config": "^0.0.2",
     "node-gyp": "^9.1.0",
     "nodemon": "^2.0.19",
