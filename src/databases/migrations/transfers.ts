@@ -1,11 +1,10 @@
 import { Knex } from 'knex';
 
 export async function up(knex: Knex): Promise<void> {
-  await knex.schema.createTable('users', table => {
+  await knex.schema.createTable('transfers', table => {
     table.bigIncrements('id').unsigned().primary();
     table.string('sendername', 105).notNullable();
     table.string('senderaccountnumber', 105).notNullable();
-    table.string('accountnumber', 105).notNullable();
     table.decimal('amount', 8, 2);
     table.string('receivername', 150).notNullable();
     table.string('receiveraccountnumber', 150).notNullable();

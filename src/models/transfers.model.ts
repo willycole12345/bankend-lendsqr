@@ -5,8 +5,8 @@ export class Transfers extends Model implements Transfer {
   id!: number;
   sendername!: string;
   senderaccountnumber!: number;
-  recievername!: string;
-  recieveraccountnumber!: number;
+  receivername!: string;
+  receiveraccountnumber!: number;
   amount!: number;
   naration!: string;
 

@@ -13,7 +13,7 @@ export class Accounts extends Model implements Account {
   accounttype!: string;
   address!: string;
 
-  static tableName = 'Accounts'; // database table name
+  static tableName = 'accounts'; // database table name
   static idColumn = 'id'; // id column name
 }
 

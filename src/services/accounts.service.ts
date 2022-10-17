@@ -9,7 +9,7 @@ import { isEmpty } from '@utils/util';
 
 class AccountService {
   public async createAccount(accountData: CreateAccountDto): Promise<Account> {
-    if (isEmpty(accountData)) throw new HttpException(400, 'userData is empty');
+    if (isEmpty(accountData)) throw new HttpException(400, 'accountData is empty');
 
     const findUser: Account = await Accounts.query().select().from('accounts').where('accountnumber', '=', accountData.accountnumber).first();
     if (findUser) throw new HttpException(409, `This Account ${accountData.accountnumber} already exists`);
@@ -48,12 +48,9 @@ class AccountService {
     if (isEmpty(transactionData)) throw new HttpException(400, 'transactions is empty');
 
     const Useraccount: Account = await Accounts.query().select().from('accounts').where('accountnumber', '=', transactionData.accountnumber).first();
-    if (!Useraccount) throw new HttpException(409, `This Account ${transactionData.accountnumber} already exists`);
 
     const CurrentBalance = Useraccount.balance;
-    if (CurrentBalance > 0) {
-      throw new HttpException(409, `This Account ${transactionData.accountnumber} already exists`);
-    } else {
+    
       const totalBalance = CurrentBalance - transactionData.amount;
 
       await Accounts.query().update({ balance: totalBalance }).where('accountnumber', '=', transactionData.accountnumber).into('accounts');
@@ -61,11 +58,7 @@ class AccountService {
       await Transactions.query()
         .insert({ ...transactionData })
         .into('transactions');
-    }
-    // console.log(CurrentBalance);
-    //const totalBalance = parseInt(CurrentBalance, 10) + parseInt(transactionData.amount, 10);
-
-    ///console.log(totalBalance);
+  
     const updateUserData: Account = await Accounts.query()
       .select()
       .from('accounts')

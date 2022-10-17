@@ -1,7 +1,7 @@
 export interface Transaction {
   id: number;
   sendername: string;
-  recievername: string;
+  receivername: string;
   accountnumber: number;
   amount: number;
   naration: string;

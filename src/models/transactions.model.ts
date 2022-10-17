@@ -4,7 +4,7 @@ import { Transaction } from '@interfaces/transactions.interface';
 export class Transactions extends Model implements Transaction {
   id!: number;
   sendername!: string;
-  recievername!: string;
+  receivername!: string;
   accountnumber!: number;
   amount!: number;
   naration!: string;

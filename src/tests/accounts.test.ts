@@ -35,7 +35,7 @@ describe('Testing account', () => {
   });
 
   describe('[POST] /accounts/funduserAccount', () => {
-        it('response statusCode 201 / fund user Account Successful', async () => { 
+        it('response statusCode 201 / funduser Account Successful', async () => { 
              const transactionData: CreateTransactionDto = {
                   sendername: 'tester',
                   receivername: 'william',
@@ -65,10 +65,10 @@ describe('Testing account', () => {
                       });
                });
                describe('[POST] /accounts/FundsTransfer/', () => {
-                  it('response statusCode 201 / Funds Transfer Successful', async () => { 
+                  it('response statusCode 201 / FundsTransfer Successful', async () => { 
                        const transferData: CreateTransferDto = {
                                     sendername: 'colewilliam',
-                                    senderaccountnumber: '1004032021',
+                                    senderaccountnumber: 1004032021,
                                     receivername: 'william',
                                     receiveraccountnumber: 1004032021,
                                     amount: 5000,
