@@ -75,27 +75,26 @@ class AccountService {
       .from('accounts')
       .where('accountnumber', '=', transferData.receiveraccountnumber)
       .first();
-    if (!receiverAccountNumber) throw new HttpException(409, `This Account ${transferData.receiveraccountnumber} does not exists`);
+    //if (!receiverAccountNumber) throw new HttpException(409, `This Account ${transferData.receiveraccountnumber} does not exists`);
 
     const senderAccountdetails: Account = await Accounts.query()
       .select()
       .from('accounts')
       .where('accountnumber', '=', transferData.senderaccountnumber)
       .first();
-    if (!senderAccountdetails) {
-      throw new HttpException(409, `This Account ${transferData.receiveraccountnumber} does not exists`);
-    } else {
-      if (senderAccountdetails.balance > 0) {
-        throw new HttpException(409, `This Account ${transferData.senderaccountnumber} has insufficent balance`);
-      } else {
+      console.log(typeof(senderAccountdetails.balance));
+      //if (Number.parseInt(senderAccountdetails.balance, 10) >=  0 ) {
+      //  throw new HttpException(409, `This Account ${transferData.senderaccountnumber} has insufficent balance`);
+     // } else {
+      
         const debitsenderaccount = senderAccountdetails.balance - transferData.amount;
         const receiverBalance = receiverAccountNumber.balance;
         const totalBalance = receiverBalance + transferData.amount;
 
         await Accounts.query().update({ balance: totalBalance }).where('accountnumber', '=', transferData.receiveraccountnumber).into('accounts');
         await Accounts.query().update({ balance: debitsenderaccount }).where('accountnumber', '=', transferData.senderaccountnumber).into('accounts');
-      }
-    }
+    //  }
+    
     await Transactions.query()
       .insert({ ...transferData })
       .into('transfers');

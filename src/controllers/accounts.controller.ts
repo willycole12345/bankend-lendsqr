@@ -51,7 +51,7 @@ class AccountsController {
       res.status(201).json({ data: createTransferData, message: 'Transfer was successfully' });
     } catch (error) {
       next(error);
-      res.status(201).json({ message: 'Withdrawal was not successful' });
+      res.status(201).json({ message: 'Transfer was not successful' });
     }
   };
 }
