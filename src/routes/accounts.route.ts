@@ -16,12 +16,10 @@ class UsersRoute implements Routes {
   }
 
   private initializeRoutes() {
-    
     this.router.post(`${this.path}`, validationMiddleware(CreateAccountDto, 'body'), this.accountsController.createAccount);
     this.router.post(`${this.path}/funduserAccount`, validationMiddleware(CreateTransactionDto, 'body'), this.accountsController.funduserAccount);
     this.router.post(`${this.path}/withDrawFunds`, validationMiddleware(CreateTransactionDto, 'body'), this.accountsController.withDrawFunds);
     this.router.post(`${this.path}/FundsTransfer`, validationMiddleware(CreateTransferDto, 'body'), this.accountsController.FundsTransfer);
-
   }
 }
 

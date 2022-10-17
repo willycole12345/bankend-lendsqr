@@ -1,8 +1,6 @@
-
-import { IsNumber, IsString ,IsNumberString } from 'class-validator';
+import { IsString, IsNumberString } from 'class-validator';
 
 export class CreateTransactionDto {
-  
   @IsString()
   public sendername: string;
 
@@ -13,11 +11,8 @@ export class CreateTransactionDto {
   public accountnumber: number;
 
   @IsNumberString()
-public amount: number;
+  public amount: number;
 
   @IsString()
   public naration: string;
-
-
 }
-

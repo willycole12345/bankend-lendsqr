@@ -7,8 +7,8 @@ export class Accounts extends Model implements Account {
   lastname!: string;
   accountnumber!: number;
   balance!: number;
-  email!:string;
-  nationality!:string;
+  email!: string;
+  nationality!: string;
   occupation!: string;
   accounttype!: string;
   address!: string;

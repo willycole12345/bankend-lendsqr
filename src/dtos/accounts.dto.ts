@@ -1,7 +1,6 @@
-import { IsNumber, IsString ,IsNumberString, IsEmail } from 'class-validator';
+import { IsString, IsNumberString, IsEmail } from 'class-validator';
 
 export class CreateAccountDto {
-  
   @IsEmail()
   public email: string;
 
@@ -15,7 +14,7 @@ export class CreateAccountDto {
   public accountnumber: number;
 
   @IsNumberString()
-public balance: number;
+  public balance: number;
 
   @IsString()
   public occupation: string;
@@ -29,8 +28,6 @@ public balance: number;
   @IsString()
   public nationality: string;
 
-//   @IsString()
-//   public created_dt: string;
-
+  //   @IsString()
+  //   public created_dt: string;
 }
-
