@@ -7,7 +7,7 @@ export class CreateTransactionDto {
   public sendername: string;
 
   @IsString()
-  public recievername: string;
+  public receivername: string;
 
   @IsNumberString()
   public accountnumber: number;

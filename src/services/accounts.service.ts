@@ -97,8 +97,8 @@ class AccountService {
                       throw new HttpException(409, `This Account ${transferData.senderaccountnumber} has insufficent balance`);
                     }else{
                       const debitsenderaccount = senderAccountdetails.balance - transferData.amount;
-                      const recieverBalance =  receiverAccountNumber.balance;
-                      const totalBalance = recieverBalance + transferData.amount;
+                      const receiverBalance =  receiverAccountNumber.balance;
+                      const totalBalance = receiverBalance + transferData.amount;
 
                       await Accounts.query()
                       .update({ balance: totalBalance })
