@@ -1,6 +1,6 @@
 {
   "name": "loanapi",
-  "version": "15.0.0",
+  "version": "0.0.0",
   "description": "TypeScript + Knex + MySQL + Express API Server",
   "author": "",
   "license": "ISC",
@@ -80,5 +80,8 @@
     "tsc-alias": "^1.7.0",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
+  },
+  "engines": {
+    "node": "16.13.2"
   }
 }
