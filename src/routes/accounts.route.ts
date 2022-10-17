@@ -6,7 +6,7 @@ import { CreateTransferDto } from '@dtos/transfers.dto';
 import { Routes } from '@interfaces/routes.interface';
 import validationMiddleware from '@middlewares/validation.middleware';
 
-class UsersRoute implements Routes {
+class AccountsRoute implements Routes {
   public path = '/accounts';
   public router = Router();
   public accountsController = new AccountsController();
@@ -23,4 +23,4 @@ class UsersRoute implements Routes {
   }
 }
 
-export default UsersRoute;
+export default AccountsRoute;
