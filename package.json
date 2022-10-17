@@ -1,6 +1,6 @@
 {
   "name": "loanapi",
-  "version": "0.0.0",
+  "version": "15.0.0",
   "description": "TypeScript + Knex + MySQL + Express API Server",
   "author": "",
   "license": "ISC",
