@@ -31,7 +31,7 @@ address: string;
 
 A user can fund their account
 
-EndPoints: [POST] https://localhost:3000/accounts/FundAccount
+EndPoints: [POST] https://localhost:3000/accounts/funduserAccount
 
 Payload Consist of
 Header: {
