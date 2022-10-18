@@ -1,4 +1,4 @@
-import { IsString, IsNumber } from 'class-validator';
+import { IsString, IsNumberString} from 'class-validator';
 
 export class CreateTransactionDto {
   @IsString()
@@ -7,10 +7,10 @@ export class CreateTransactionDto {
   @IsString()
   public receivername: string;
 
-  @IsNumber()
+  @IsNumberString()
   public accountnumber: number;
 
-  @IsNumber()
+  @IsNumberString()
   public amount: number;
 
   @IsString()

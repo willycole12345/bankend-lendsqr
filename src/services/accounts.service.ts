@@ -52,7 +52,7 @@ class AccountService {
     const CurrentBalance = Useraccount.balance;
     
       const totalBalance = CurrentBalance - transactionData.amount;
-
+        console.log(totalBalance);
       await Accounts.query().update({ balance: totalBalance }).where('accountnumber', '=', transactionData.accountnumber).into('accounts');
 
       await Transactions.query()
