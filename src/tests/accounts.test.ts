@@ -50,7 +50,7 @@ describe('Testing account', () => {
             });
      });
      describe('[POST] /accounts/withDrawFunds/', () => {
-                  it('response statusCode 201 /withDrawFunds Successful', async () => { 
+                  it('response statusCode 201 /withDrawFunds', async () => { 
                        const transactionData: CreateTransactionDto = {
                                     sendername:'tester',
                                     receivername:'williams',

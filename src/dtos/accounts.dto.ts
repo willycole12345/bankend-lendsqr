@@ -1,4 +1,4 @@
-import { IsString, IsNumberString, IsEmail } from 'class-validator';
+import { IsString, IsNumber, IsEmail } from 'class-validator';
 
 export class CreateAccountDto {
   @IsEmail()
@@ -10,10 +10,10 @@ export class CreateAccountDto {
   @IsString()
   public lastname: string;
 
-  @IsNumberString()
+  @IsNumber()
   public accountnumber: number;
 
-  @IsNumberString()
+  @IsNumber()
   public balance: number;
 
   @IsString()

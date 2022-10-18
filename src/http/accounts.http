@@ -8,7 +8,7 @@ Content-Type: application/json
 
 {
                   sendername: 'tester',
-                  recievername: '',
+                  recievername: 'william',
                   accountnumber: 1004032021,
                   amount: 2000,
                   naration: 'personal fund',
@@ -21,7 +21,7 @@ Content-Type: application/json
 
 {
                   sendername: 'tester',
-                  recievername: '',
+                  recievername: 'william',
                   accountnumber: 1004032021,
                   amount: 2000,
                   naration: 'personal fund',
@@ -44,9 +44,9 @@ POST {{ baseURL }}/accounts/FundsTransfer/
 Content-Type: application/json
   {
    sendername: 'cole william',
-   senderaccountnumber: '1004032021',
-   recievername: 'william',
-   recieveraccountnumber: '1004032021',
+   senderaccountnumber: 1004032021,
+   recievername: william,
+   recieveraccountnumber: 1004032021,
    amount: 5000,
    naration: 'test funding'
  }
