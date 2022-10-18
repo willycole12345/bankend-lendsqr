@@ -46,7 +46,7 @@ describe('Testing account', () => {
               
             const accountsRoute = new AccountsRoute();
             const app = new App([accountsRoute]);
-                    return request(app.getServer()).post(`${accountsRoute.path}`).send(transactionData).expect(201);
+                    return request(app.getServer()).post(`${accountsRoute.path}/funduserAccount`).send(transactionData).expect(201);
             });
      });
      describe('[POST] /accounts/withDrawFunds/', () => {
@@ -61,7 +61,7 @@ describe('Testing account', () => {
                         
                       const accountsRoute = new AccountsRoute();
                       const app = new App([accountsRoute]);
-                              return request(app.getServer()).post(`${accountsRoute.path}`).send(transactionData).expect(201);
+                              return request(app.getServer()).post(`${accountsRoute.path}/withDrawFunds`).send(transactionData).expect(201);
                       });
                });
                describe('[POST] /accounts/FundsTransfer/', () => {
@@ -77,7 +77,7 @@ describe('Testing account', () => {
                         
                       const accountsRoute = new AccountsRoute();
                       const app = new App([accountsRoute]);
-                              return request(app.getServer()).post(`${accountsRoute.path}`).send(transferData).expect(201);
+                              return request(app.getServer()).post(`${accountsRoute.path}/FundsTransfer`).send(transferData).expect(201);
                       });
                });
 });
